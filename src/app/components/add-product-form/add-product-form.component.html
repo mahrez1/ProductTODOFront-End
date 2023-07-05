@@ -1,0 +1,20 @@
+<h2>Add Product</h2>
+<form enctype="multipart/form-data" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="productName">Name:</label>
+    <input type="text" id="productName" [(ngModel)]="product.productName" name="productName">
+  </div>
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" [(ngModel)]="product.quantity" name="quantity">
+  </div>
+  <div>
+    <label for="available">Available:</label>
+    <input type="checkbox" id="available" [(ngModel)]="product.available" name="available">
+  </div>
+  <div>
+    <label for="imageUrl">Image:</label>
+    <input type="file" id="imageUrl" name="imageUrl" (change)="onImageFileChange($event)" />
+  </div>
+  <button type="submit">Add Product</button>
+</form>
